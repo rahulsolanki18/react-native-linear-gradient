@@ -181,9 +181,11 @@
     if (!self.colors || self.colors.count == 0 || size.width == 0.0 || size.height == 0.0)
         return;
 
-    CGFloat *locations = nil;
+    CGFloat inset = 0;
 
-    locations = malloc(sizeof(CGFloat) * self.colors.count);
+    CGRect drawingRect = CGRectInset(self.bounds, inset, inset);
+
+    CGFloat *locations = malloc(sizeof(CGFloat) * self.colors.count);
 
     for (NSInteger i = 0; i < self.colors.count; i++)
     {
@@ -208,18 +210,19 @@
     free(locations);
 
     CGPoint start, end;
+    CGSize adjustedSize = drawingRect.size;
 
     if (_useAngle)
     {
         // Angle is in bearing degrees (North = 0, East = 90)
         // convert it to cartesian (N = 90, E = 0)
         float angle = (90 - _angle);
-        CGPoint relativeStartPoint = [RNLinearGradientLayer getGradientStartPointFromAngle:angle AndSize:size];
+        CGPoint relativeStartPoint = [RNLinearGradientLayer getGradientStartPointFromAngle:angle AndSize:adjustedSize];
 
         // Get true angleCenter
         CGPoint angleCenter = CGPointMake(
-            _angleCenter.x * size.width,
-            _angleCenter.y * size.height
+            _angleCenter.x * adjustedSize.width + drawingRect.origin.x,
+            _angleCenter.y * adjustedSize.height + drawingRect.origin.y
         );
         // Translate to center on angle center
         // Flip Y coordinate to convert from cartesian
@@ -235,8 +238,10 @@
     }
     else
     {
-        start = CGPointMake(self.startPoint.x * size.width, self.startPoint.y * size.height);
-        end = CGPointMake(self.endPoint.x * size.width, self.endPoint.y * size.height);
+        start = CGPointMake(self.startPoint.x * adjustedSize.width + drawingRect.origin.x,
+                    self.startPoint.y * adjustedSize.height + drawingRect.origin.y);
+        end = CGPointMake(self.endPoint.x * adjustedSize.width + drawingRect.origin.x,
+                  self.endPoint.y * adjustedSize.height + drawingRect.origin.y);
     }
 
     CGContextDrawLinearGradient(ctx, gradient,
