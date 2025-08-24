@@ -46,6 +46,14 @@
   "codegenConfig": {
     "name": "RNLinearGradientSpec",
     "type": "components",
-    "jsSrcsDir": "src"
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.lineargradient"
+    },
+    "ios": {
+      "componentProvider": {
+        "LinearGradientView": "RNLinearGradient"
+      }
+    }
   }
 }

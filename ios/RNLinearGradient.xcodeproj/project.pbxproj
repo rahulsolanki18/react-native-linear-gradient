@@ -9,20 +9,10 @@
 /* Begin PBXBuildFile section */
 		D6BF2FA420D7DC1F006672AE /* RNLinearGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BF2FA320D7DC1F006672AE /* RNLinearGradientLayer.m */; };
 		EF6045F01C4E5D290001F552 /* RNLinearGradient.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF6045ED1C4E5D290001F552 /* RNLinearGradient.mm */; };
-		EF6045F11C4E5D290001F552 /* RNLinearGradientManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF6045EF1C4E5D290001F552 /* RNLinearGradientManager.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64AA15061EF7F30100718508 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -39,19 +29,10 @@
 		D6BF2FA320D7DC1F006672AE /* RNLinearGradientLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNLinearGradientLayer.m; sourceTree = "<group>"; };
 		EF6045EC1C4E5D290001F552 /* RNLinearGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLinearGradient.h; sourceTree = "<group>"; };
 		EF6045ED1C4E5D290001F552 /* RNLinearGradient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLinearGradient.mm; sourceTree = "<group>"; };
-		EF6045EE1C4E5D290001F552 /* RNLinearGradientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLinearGradientManager.h; sourceTree = "<group>"; };
-		EF6045EF1C4E5D290001F552 /* RNLinearGradientManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLinearGradientManager.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		58B511D81A9E6C8500147676 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64AA15051EF7F30100718508 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,8 +55,6 @@
 			children = (
 				EF6045EC1C4E5D290001F552 /* RNLinearGradient.h */,
 				EF6045ED1C4E5D290001F552 /* RNLinearGradient.mm */,
-				EF6045EE1C4E5D290001F552 /* RNLinearGradientManager.h */,
-				EF6045EF1C4E5D290001F552 /* RNLinearGradientManager.mm */,
 				D6BF2FA220D7DC1F006672AE /* RNLinearGradientLayer.h */,
 				D6BF2FA320D7DC1F006672AE /* RNLinearGradientLayer.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -121,6 +100,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -138,7 +118,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6045F11C4E5D290001F552 /* RNLinearGradientManager.mm in Sources */,
 				EF6045F01C4E5D290001F552 /* RNLinearGradient.mm in Sources */,
 				D6BF2FA420D7DC1F006672AE /* RNLinearGradientLayer.m in Sources */,
 			);

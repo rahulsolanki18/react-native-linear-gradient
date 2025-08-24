@@ -1,6 +1,5 @@
 #import "RNLinearGradient.h"
 
-#ifdef RCT_NEW_ARCH_ENABLED
 #import <React/RCTConversions.h>
 #import <React/RCTConvert.h>
 #import <react/renderer/components/RNLinearGradientSpec/ComponentDescriptors.h>
@@ -9,7 +8,6 @@
 #import <react/renderer/components/RNLinearGradientSpec/RCTComponentViewHelpers.h>
 
 #import "RCTFabricComponentsPlugins.h"
-#endif
 
 #import <React/RCTConvert.h>
 #import <UIKit/UIKit.h>
@@ -17,13 +15,11 @@
 
 #import "RNLinearGradientLayer.h"
 
-#ifdef RCT_NEW_ARCH_ENABLED
 using namespace facebook::react;
 
 @interface RNLinearGradient () <RCTRNLinearGradientViewProtocol>
 
 @end
-#endif
 
 @implementation RNLinearGradient
 
@@ -119,8 +115,6 @@ using namespace facebook::react;
     self.gradientLayer.angle = angle;
 }
 
-#ifdef RCT_NEW_ARCH_ENABLED
-
 + (ComponentDescriptorProvider)componentDescriptorProvider
 {
     return concreteComponentDescriptorProvider<RNLinearGradientComponentDescriptor>();
@@ -199,7 +193,5 @@ Class<RCTComponentViewProtocol> RNLinearGradientCls(void)
 {
     return RNLinearGradient.class;
 }
-
-#endif
 
 @end
