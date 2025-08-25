@@ -1,6 +1,6 @@
 {
   "name": "react-native-linear-gradient",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.1",
   "description": "A <LinearGradient> element for React Native",
   "main": "index.js",
   "types": "index.d.ts",
@@ -52,7 +52,7 @@
     },
     "ios": {
       "componentProvider": {
-        "LinearGradientView": "RNLinearGradient"
+        "RNLinearGradient": "RNLinearGradient"
       }
     }
   }
